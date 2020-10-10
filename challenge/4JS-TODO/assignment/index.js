@@ -1,11 +1,11 @@
-const COUNTRY_LS = "currentcountry";
+const COUNTRY_LS = "country";
 countriesSelect = document.getElementById("chooseCountries");
 
 function handleSave() {
     const conVal = document.getElementById("chooseCountries");
-    if (conVal.value !== "None"){
+    if (conVal.value !== "None") {
         console.log(conVal.value);
-    }    
+    }
 }
 
 function chooseCountry() {
