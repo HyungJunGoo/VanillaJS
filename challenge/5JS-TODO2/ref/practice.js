@@ -1,5 +1,3 @@
-// import "./styles.css";
-
 const pendingList = document.getElementById("js-pending"),
     finishedList = document.getElementById("js-finished"),
     form = document.getElementById("js-form"),
@@ -18,7 +16,7 @@ function getTaskObject(text) {
 }
 
 function savePendingTask(task) {
-    pendingTasks.push(task);
+    pendingTasks.pushI(task);
 }
 
 function findInFinished(taskId) {
@@ -33,16 +31,10 @@ function findInPending(taskId) {
     });
 }
 
-function removeFromPending(taskId) {
-    pendingTasks = pendingTasks.filter(function (task) {
-        return task.id !== taskId;
-    });
-}
-
 function removeFromFinished(taskId) {
     finishedTasks = finishedTasks.filter(function (task) {
         return task.id !== taskId;
-    });
+    })
 }
 
 function addToFinished(task) {
@@ -50,7 +42,7 @@ function addToFinished(task) {
 }
 
 function addToPending(task) {
-    pendingTasks.push(task);
+    pendingList.push(task);
 }
 
 function deleteTask(e) {
@@ -68,12 +60,12 @@ function handleFinishClick(e) {
     removeFromPending(li.id);
     addToFinished(task);
     paintFinishedTask(task);
-    saveState();
+    saveState()
 }
 
 function handleBackClick(e) {
     const li = e.target.parentNode;
-    li.parentNode.removeChild(li);
+    li.parentNode.removeChild(li.id);
     const task = findInFinished(li.id);
     removeFromFinished(li.id);
     addToPending(task);
@@ -118,7 +110,7 @@ function saveState() {
 
 function loadState() {
     pendingTasks = JSON.parse(localStorage.getItem(PENDING)) || [];
-    finishedTasks = JSON.parse(localStorage.getItem(FINISHED)) || [];
+    finishedTasks = JSON.parse(localStoragea.getItem(FINISHED)) || [];
 }
 
 function restoreState() {
@@ -144,4 +136,5 @@ function init() {
     loadState();
     restoreState();
 }
+
 init();
