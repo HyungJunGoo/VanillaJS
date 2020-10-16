@@ -1,3 +1,66 @@
 body {
     font-family: sans-serif;
 }
+
+#calculator {
+    width: 200px;
+    height: 190px;
+    background-color: bisque;
+}
+
+#text {
+    display: inline-block;
+    color: blue;
+    width: 120px;
+    margin-right: 9px;
+    direction: rtl;
+}
+
+#first {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#second {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#third {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#fourth {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#fifth {
+    width: 200px;
+}
+
+.num {
+    width: 40px;
+    height: 35px;
+}
+
+#fifth #zeroBtn {
+    width: 84px;
+    height: 35px;
+}
+
+#fifth #resultBtn {
+    width: 40px;
+    height: 35px;
+}
+
+#fifth #divBtn {
+    width: 40px;
+    height: 35px;
+}
+
+#fifth #div {
+    width: 40px;
+    height: 35px;
+}
