@@ -5,7 +5,6 @@ body {
 #calculator {
     width: 200px;
     height: 190px;
-    background-color: bisque;
 }
 
 #text {
@@ -46,7 +45,7 @@ body {
 }
 
 #fifth #zeroBtn {
-    width: 84px;
+    width: 85px;
     height: 35px;
 }
 

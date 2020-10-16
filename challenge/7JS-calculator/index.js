@@ -141,8 +141,9 @@ function handleTotal() {
 }
 
 function handleClear() {
-    text.innerHTML = 0;
-    CURRENT = "";
+    handleDisplay(0);
+    let newVALUES = [];
+    VALUES = newVALUES;
 }
 
 function handleDisplay(value) {
